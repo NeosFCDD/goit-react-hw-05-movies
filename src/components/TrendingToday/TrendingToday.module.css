@@ -1,0 +1,24 @@
+.trendlist {
+        margin: 0 auto;
+        display: flex;
+         justify-content: center;
+        padding-left: 0;
+        padding-bottom: 16px;
+}
+      
+.movie {
+        display: block;
+        margin-bottom: 15px;
+}
+      
+.movie img {
+        display: inline-block;
+        margin-right: 15px;
+}
+      
+.link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+}

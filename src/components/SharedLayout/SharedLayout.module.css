@@ -1,0 +1,19 @@
+.header {
+        border-bottom: 2px solid red;
+}
+
+.nav {
+        display: flex;
+        justify-content: center;
+}
+
+.navlink {
+        display: inline-block;
+        border-radius: 5px;
+        padding: 20px 40px;
+        font-weight: 900;
+}
+
+.container {
+        padding: 10px;
+}
