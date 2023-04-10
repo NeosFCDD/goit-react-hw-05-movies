@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgoit_react_hw_05_movies=self.webpackChunkgoit_react_hw_05_movies||[]).push([[639],{639:function(e,a,r){r.r(a),r.d(a,{default:function(){return s}});var i=r(691),n="Loader_container__X02md",t=r(184),s=function(){return(0,t.jsx)("div",{className:n,children:(0,t.jsx)(i.fe,{visible:!0,height:"80",width:"80",ariaLabel:"dna-loading",wrapperStyle:{},wrapperClass:"dna-wrapper"})})}}}]);
+//# sourceMappingURL=639.d969a77d.chunk.js.map
