@@ -10,7 +10,7 @@ const Home = () => {
         const [trendingToday, setTrendingToday] = useState([]);
 
         useEffect(() => {
-                const getTrendingToday = async() => {
+                const getTrendingToday = async () => {
                         let responce = await fetch (`${URL}?api_key=${API_KEY}`);
                         responce = await responce.json();
                         setTrendingToday(responce.results);
@@ -20,8 +20,8 @@ const Home = () => {
         }, []);
 
         return (
-                <div className="{css.container}">
-                        <h2 className="{css.secondheader}">Trending Today</h2>
+                <div className={css.container}>
+                        <h2 className={css.secondheader}>TRENDING TODAY</h2>
                         <TrendingToday movies = {trendingToday}/>
                 </div>
         );

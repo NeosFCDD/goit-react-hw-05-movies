@@ -22,7 +22,7 @@ const QueryList = ({ movies }) => {
                   movie.poster_path ? `${IMG_URL}${movie.poster_path}` : defaultImage
                 }
                 alt={movie.title}
-                width="100px"
+                width="250px"
                 height="100%"
               ></img>
               {movie.title}

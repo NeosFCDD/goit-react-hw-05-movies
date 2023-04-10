@@ -11,9 +11,9 @@ const TrendingToday = ({movies}) => {
                         {movies.map( (movie) => {
                                 return (
                                         <li key={movie.id} className={css.movie}>
-                                                <Link to={`/movies/${movie.id}`} className="{css.link}">
+                                                <Link to={`/movies/${movie.id}`} className={css.link}>
                                                         <img src={movie.poster_path ? `${IMG_URL}${movie.poster_path}` : defaultImage} 
-                                                        alt="{movie.title}" width="200px" height="100%"/>
+                                                        alt={movie.title} width="250px" height="100%"></img>
                                                         {movie.title}
                                                 </Link>
                                         </li>

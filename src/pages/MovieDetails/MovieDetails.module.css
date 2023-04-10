@@ -6,8 +6,9 @@
         padding: 0 20px 0 10px;
         display: inline-flex;
         color: #000;
-        background-color: #fff;
-        border-radius: 5px;
+        background-color: rgb(223, 223, 223);
+        border: 1px solid rgb(11, 160, 160);
+        border-radius: 20px;
 }
 
 .svg {
@@ -19,7 +20,7 @@
 .return:hover,
 .return:active {
         color: #000;
-        background-color: rgb(9, 243, 223);
+        background-color: rgb(11, 160, 160);
 }
 
 .info {
@@ -34,19 +35,20 @@
         border-radius: 6px;
         width: 300px;
         height: 100%;
-        margin-right: 25px;
+        margin-right: 40px;
 }
 
 .name {
-        color: red;
+        color: rgb(11, 160, 160);
+        padding-bottom: 30px;
 }
 
 .text {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
 }
 
 .addinfo {
-        margin-top: 15px;
+        margin-top: 30px;
         text-align: center;
         margin-bottom: 15px;
 }

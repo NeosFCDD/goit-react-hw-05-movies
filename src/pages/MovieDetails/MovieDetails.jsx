@@ -1,18 +1,20 @@
 import { useParams, Link, Outlet, useLocation } from "react-router-dom";
-import { useEffect, useState, useRef } from "react";
-import leftarrow from "components/DefaultImg/left-arrow.svg";
+import { useEffect, useState, Suspense, useRef } from "react";
+import Loader from "components/Loader/Loader";
 import css from "pages/MovieDetails/MovieDetails.module.css";
+import leftarrow from "components/DefaultImg/left-arrow.svg";
 import defaultImage from "components/DefaultImg/defaultImage.jpg"
 
 const API_KEY = "e6ff7d92338793893a42bd2f0fabea27";
 const URL = "https://api.themoviedb.org/3/movie";
-const IMG_URL = "https://image.tmdb.org/t/p/w300/";
+const IMG_URL = "https://image.tmdb.org/t/p/w300";
+
 
 const MovieDetails = () => {
   const [movie, setMovie] = useState(null);
   const { movieId } = useParams();
   const location = useLocation();
-  const returnLinkRef = useRef (location.state?.from ?? "/");
+  const backLinkLocationRef = useRef(location.state?.from ?? "/");
 
   useEffect(() => {
     const getMovieDetails = async () => {
@@ -28,26 +30,27 @@ const MovieDetails = () => {
 
   const getReleaseYear = (releaseDate) => {
     if (!releaseDate) {
-      return "Not found";
+      return "????";
     }
     let releaseYear = new Date(releaseDate);
     return releaseYear.getFullYear();
   };
 
   const getGenres = (genres) => {
-    let array = [];
+    let arr = [];
     genres.map((genre) => {
-      return array.push(genre.name);
+      return arr.push(genre.name);
     });
-    return array.join(", ");
+    return arr.join(", ");
   };
 
   return (
     <div className={css.container}>
-      <Link to={returnLinkRef.current} className={css.return}>
+      <Link to={backLinkLocationRef.current} className={css.return}>
         <img src={leftarrow} alt="arrow-left" className={css.svg} />
         Go back
       </Link>
+      {movie ? (
         <div className={css.info}>
           <div className={css.description}>
             <img
@@ -81,8 +84,13 @@ const MovieDetails = () => {
               </li>
             </ul>
           </div>
+          <Suspense fallback={<Loader />}>
             <Outlet />
+          </Suspense>
         </div>
+      ) : (
+        <Loader />
+      )}
     </div>
   );
 };
