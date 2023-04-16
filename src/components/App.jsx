@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import SharedLayout from "./SharedLayout/SharedLayout";
+import NotFound from "pages/NotFound/NotFound";
 
 const Home = lazy(() => import("pages/Home/Home.jsx"));
 const MovieDetails = lazy(() => import("pages/MovieDetails/MovieDetails"));
@@ -21,7 +22,7 @@ export default function App() {
                 <Route path="cast" element={<Cast />} />
                 <Route path="reviews" element={<Reviews />} />
             </Route>
-            <Route path="*" element={<Home />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </Suspense>

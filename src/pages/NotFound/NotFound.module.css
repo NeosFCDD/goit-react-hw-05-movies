@@ -1,0 +1,12 @@
+.container{
+        display: block;
+        text-align: center;
+}
+
+
+.message{
+        font-size: 50px;
+        font-weight: 700;
+
+}
+ 
